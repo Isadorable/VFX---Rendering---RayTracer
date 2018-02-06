@@ -1,37 +1,29 @@
 function scene = simplescene
 % SIMPLESCENE Gives a starting scene to base your ray tracer off
 %
-% Adapted from other files in this 
-%
-% USAGE: Just write 
-%   scene = simplescene;
-% either at the Matlab prompt or in your script (then run your script).
-% This will load in 'scene' as a variable, and you can explore it using the
-% Workspace box in the top right of Matlab.
-%
 % The scene will have the following format
 % * scene.objects: This contains some number of objects in the scene.
-% -€“ object.x: Ignore, gives original points, use transformed points instead.
-% -€“ object.p: Transformed points. Each column is a point in 3D space.
-% -€“ object.q: Ignore, gives mid-way points before final transformations.
-% -€“ object.tri: Each column is a triangle in this object, lists three points in object.p.
-% -€“ object.colour: Each column gives the colour of the corresponding triangle. 
+% -â‚¬â€œ object.x: Ignore, gives original points, use transformed points instead.
+% -â‚¬â€œ object.p: Transformed points. Each column is a point in 3D space.
+% -â‚¬â€œ object.q: Ignore, gives mid-way points before final transformations.
+% -â‚¬â€œ object.tri: Each column is a triangle in this object, lists three points in object.p.
+% -â‚¬â€œ object.colour: Each column gives the colour of the corresponding triangle. 
 %             First three rows are RGB values. 
 %             Final three give ratios of base color/reflected colour/refracted colour.
-% -€“ object.n: The normal for each triangle.
-% -€“ object.vt: These define UV points within a hypothetical texture map (image)
-% -€“ object.tri_uvs: For each triangle, gives the points from object.vt which should be used for texturing
-% -€“ object.name: A human-readable string describing the shape of the object.
+% -â‚¬â€œ object.n: The normal for each triangle.
+% -â‚¬â€œ object.vt: These define UV points within a hypothetical texture map (image)
+% -â‚¬â€œ object.tri_uvs: For each triangle, gives the points from object.vt which should be used for texturing
+% -â‚¬â€œ object.name: A human-readable string describing the shape of the object.
 % * scene.numberofobjects: The total number of objects, equal to the length of the object field, for easy reference.
 % * scene.imagesize: The resolution for this render, given as [width, height].
 % * scene.windowsize: The size of the image plane (in the 3D space), given as [width, height]. 
 % * scene.ambientlight: The values to use for the ambient light, RGB.
 % * scene.directionallight: Each column contains the location of a light in 3D space.
 % * scene.cam: The camera definition to use. Has the following fields:
-% -€“ cam.focus: The focal point of the camera in 3D space.
-% -€“ cam.focallength: The distance between the focal point and the image plane.
-% -€“ cam.{up,right,forward}: The orientation of the camera.
-% -€“ cam.coi: The centre of the image plane, computed from the other values for easy reference.
+% -â‚¬â€œ cam.focus: The focal point of the camera in 3D space.
+% -â‚¬â€œ cam.focallength: The distance between the focal point and the image plane.
+% -â‚¬â€œ cam.{up,right,forward}: The orientation of the camera.
+% -â‚¬â€œ cam.coi: The centre of the image plane, computed from the other values for easy reference.
 
 addpath('SceneHelpers')
 
