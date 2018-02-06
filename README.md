@@ -10,4 +10,4 @@ Implemented:
 * Reflections 
 * Refractions
 
-![Alt text](ray.png?raw=true "Title")
+![Alt text](examples/ray.png?raw=true "Title")
